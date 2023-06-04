@@ -1,0 +1,155 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+/* body {
+  position: relative;
+  color: white;
+  height: 100vh;
+  background: linear-gradient(
+    200.96deg,
+    #fedc2a -29.09%,
+    #dd5789 51.77%,
+    #7a2c9e 129.35%
+  );
+  font-family: sans-serif;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  appearance: none;
+  font-size: 1.3rem;
+  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
+    0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+  transition: all ease-in 0.1s;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  height: fit-content;
+  width: fit-content;
+  margin: 10px;
+}
+
+a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  position: relative;
+  width: 85vw;
+  height: 85vw;
+  background: #001c2a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-app-region: drag;
+}
+
+.clock span {
+  inset: 12.5vw;
+  position: absolute;
+  font-size: 8vw;
+  opacity: 0.75;
+  color: rgb(151,246,83);
+  /* transform: rotate(calc(30deg*var(--i))); */
+}
+
+.clock span b {
+  position: absolute;
+  display: inline-block;
+  /* transform: rotate(calc(-30deg*var(--i))); */
+}
+
+
+.circle {
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+  --clr: #fee800;
+  border: 1px solid var(--clr);
+}
+
+/* .circle i {
+  position: absolute;
+  width: 2px;
+  height: 50%;
+  background: var(--clr);
+  opacity: 0.75;
+}
+
+.circle:nth-child(1) i {
+  width: 2px;
+}
+
+.circle:nth-child(2) i {
+  width: 2px;
+} */
+
+.circle2 {
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  height: 45vw;
+  z-index: 7;
+  --clr: #04fc43;
+  border: 1px solid var(--clr);
+}
+
+.circle3 {
+  justify-content: center;
+  align-items: flex-start;
+  width: 30vw;
+  height: 30vw;
+  z-index: 8;
+  --clr: #ff2972;
+  border: 1px solid var(--clr);
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  top: -1.7vw;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  background: var(--clr);
+  box-shadow: 0 0 10px var(--clr),
+  0 0 2vw var(--clr);
+}
